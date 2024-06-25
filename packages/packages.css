@@ -1,5 +1,5 @@
 main {
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .background {
@@ -37,9 +37,10 @@ main {
 
 .package__badge {
   position: absolute;
-  top: 0.625rem;
-  right: 2.5rem;
-  margin: 1.25rem;
+  top: 0.1rem;
+  right: 1rem;
+  margin: 0.8rem;
+
   font-size: 1rem;
   color: white;
   background: #ff5454;
@@ -85,4 +86,20 @@ main {
 
 #premium .package__subtitle {
   color: #bbb;
+}
+
+@media (min-width: 48rem) {
+  main {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .package {
+    border-left: 4px solid #0e4f1f;
+  }
+  #free {
+    border-right: 4px solid #0e4f1f;
+  }
 }
