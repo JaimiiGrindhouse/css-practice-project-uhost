@@ -3,21 +3,34 @@
 #product-overview {
   background-image: url("/freedom.jpg");
   background-size: cover;
-  background-position: left 10% bottom 90%;
+  background-position: center;
   background-repeat: no-repeat;
 
   width: 100vw;
-  height: 45vh;
+  height: 55vh;
 
   padding: 0.625rem;
+
   position: relative;
 }
 
 #product-overview h1 {
   color: white;
   font-family: anton;
-  margin-top: 24rem;
+  margin-top: 16rem;
   width: 100%;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 48rem) and (min-height: 40rem) {
+  #product-overview {
+    height: 60vh;
+    background-position: 50% 25%;
+  }
+  #product-overview h1 {
+    font-size: 3rem;
+    margin-top: 22rem;
+  }
 }
 
 .section-title {
@@ -27,26 +40,18 @@
 
 /* PLAN SECTION */
 
-.plan__list {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-}
-
 .plan {
   background-color: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
 }
 
 .plan--highlighted {
   background-color: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .plan__annotation {
@@ -82,11 +87,31 @@
   margin: 0.5rem 0;
 }
 
+@media (min-width: 48rem) {
+  .plan__list {
+    width: 80%;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    margin: 0.5rem;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
 /* KEY FEATURES */
 
 #key-features {
   background-color: #ff1b68;
-  margin-top: 5rem;
+  margin-top: 0.5rem;
   padding: 1rem;
 }
 
@@ -103,9 +128,9 @@
 }
 
 .key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  display: block;
+  width: 100%;
+  /* vertical-align: middle; */
 }
 
 iframe {
@@ -130,6 +155,26 @@ iframe {
   color: white;
   font-size: 1.25rem;
 }
+
+@media (min-width: 48rem) {
+  #key-features {
+    margin-top: 5rem;
+  }
+  .key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    max-width: 25rem;
+  }
+}
+
+/* -------Modal------- */
 
 .modal {
   position: fixed;
